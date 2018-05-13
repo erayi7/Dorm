@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="368dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/permNoTextR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Permission No:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/studentNameTextR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Name Surname"
+            app:layout_constraintStart_toEndOf="@+id/permNoTextR"
+            app:layout_constraintTop_toTopOf="@+id/permNoTextR" />
+
+        <TextView
+            android:id="@+id/releaseDateTextR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Release Date"
+            app:layout_constraintStart_toStartOf="@+id/adressTextR"
+            app:layout_constraintTop_toBottomOf="@+id/adressTextR" />
+
+        <TextView
+            android:id="@+id/returnDateTextR"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="18dp"
+            android:text="Return Date"
+            app:layout_constraintStart_toStartOf="@+id/releaseDateTextR"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDateTextR" />
+
+        <TextView
+            android:id="@+id/adressTextR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Adress"
+            app:layout_constraintStart_toStartOf="@+id/permNoTextR"
+            app:layout_constraintTop_toBottomOf="@+id/permNoTextR" />
+
+        <Button
+            android:id="@+id/confirmR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="CONFIRM"
+            app:layout_constraintBottom_toTopOf="@+id/rejectR"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/rejectR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="REJECT"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/confirmR" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

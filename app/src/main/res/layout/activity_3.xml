@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity3">
+
+    <TextView
+        android:id="@+id/helpText"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:text='You can follow the instructions here. If you want to request a new permission, hit "CREATE" button. You can create a new request here by writing the wanted info. You can see the current request informations here and cancel them if they are not already concluded. If you want to refresh all data on screen, you need to click the button again.'
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="16dp"
+        android:onClick="createbutton"
+        android:text="CREATE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="85dp"
+        android:onClick="mypermbutton"
+        android:text="MYPERM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Layout1"
+        android:layout_width="368dp"
+        android:layout_height="316dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:onClick="confirmbutton"
+            android:text="CONFIRM"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button19" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="122dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Return Date"
+            android:inputType="date"
+            app:layout_constraintStart_toStartOf="@+id/editText3"
+            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="223dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="@+id/editText3"
+            app:layout_constraintTop_toTopOf="parent"></Spinner>
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="122dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Release Date"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="132dp"
+            android:onClick="cancelbutton"
+            android:text="CANCEL"
+            app:layout_constraintStart_toEndOf="@+id/button5"
+            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Layout2"
+        android:layout_width="352dp"
+        android:layout_height="415dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ListView
+            android:id="@+id/myPerm"
+            android:layout_width="349dp"
+            android:layout_height="409dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="2dp" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
